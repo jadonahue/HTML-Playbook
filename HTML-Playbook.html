@@ -63,8 +63,8 @@
     <tbody>
         <!-- Table Row -->
         <tr>
-            <!-- Table Data -->
-            <td></td>
+            <!-- Table Data With Emoji -->
+            <td>⭐️</td>
         </tr>
     </tbody>
     <!-- Table Footer -->
@@ -74,3 +74,25 @@
         </tr>
     </tfoot>
 </table>
+
+<!-- Forms -->
+<!-- This form upon submission will open the default mail app and post using plain text. -->
+<form action="mailto:fake-email@gmail.com" method="post" enctype="text/plain">
+    <!-- This is a label with input for the name. This uses br to format on next line -->
+    <label for="">Your Name:</label>
+    <input type="text" name="yourName"><br>
+    <!-- This is a label with input for email. This uses br to format on next line -->
+    <label for="">Your Email:</label>
+    <input type="email" name="yourEmail"><br>
+    <!-- This is a label with input for number. This uses br to format on next line -->
+    <label for="">Your Number:</label>
+    <input type="number" name="yourNumber"><br>
+    <!-- This is a label with text area for message. This uses br to format on next line -->
+    <label for="">Your Message:</label>
+    <textarea name="yourMessage" id="" cols="30" rows="10"></textarea><br>
+    <!-- This is a label with requesting to join email list with checkbox. This uses br to format on next line -->
+    <label for="">Would You Like To Join The Email List?</label>
+    <input type="checkbox" name="subscibeEmail" id=""><br>
+    <!-- This is a submit button. -->
+    <input type="submit" value="Submit">
+</form>
