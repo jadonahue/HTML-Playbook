@@ -96,3 +96,34 @@
     <!-- This is a submit button. -->
     <input type="submit" value="Submit">
 </form>
+
+
+<!-- Inline CSS -->
+<!-- This is in the html tag. CSS "style" will adjust the background color for the body of the site. -->
+
+<body style="background-color: aqua;">
+
+</body>
+<!-- To do this in multiple tags instead of one, use a inline CSS. 
+    This is done inside the header and whatever tag which you want effected. In this case body. 
+    This will also only effect this page but not external ones. -->
+
+<head>
+    <style>
+        body {
+            background-color: #D6E6F2
+        }
+
+        /* This adjusts the border line throughout the page. By default if border style isnt selected, browsers may overide. 
+        If one border style is defined it will do all four borders. You can adjust each border side by defining each one. 
+        You can also adjust it to percentages to effect display on different types of devices with differenc screen sizes. */
+        hr {
+            background-color: transparent;
+            border-style: dotted none none;
+            border-color: grey;
+            border-width: 05px;
+            height: 20px;
+            width: 03%;
+        }
+    </style>
+</head>
