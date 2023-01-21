@@ -154,3 +154,42 @@ In example img is a class and then how to style in css external. -->
 #heading {
     color: blue
 }
+
+
+<!-- CSS Disply -->
+<!-- You can use the span to adjust/select certain things inside blocks with css/classes. 
+This is an inline element. A block element such as h1 or p goes entire block of page.
+Inline elements cant adjust width. Block elements can adjust width.-->
+<p>Hello <span class="pro">Josh!</span>How are you?</p>
+
+<!-- Common Inline Elements -->
+<span></span>
+<img src="" alt="">
+<a href=""></a>
+
+<!-- Change properties to inline or block.
+You can adjust a block to display as inline etc.
+Again a block will not allow anything else on same line but can adjust width.
+A span cannot adjust width but will allow something else on same line. -->
+p {
+    display: inline;
+}
+
+p {
+    display: block
+}
+
+<!-- Change properties to inline block. The best of both worlds. -->
+p {
+    display: inline-block;
+}
+
+<!-- Change display to none will remove as if it didnt exist. 
+    Dislay visibility hidden will make it disappear but occupy the space.-->
+.p-class-ex {
+    display: none;
+}
+
+.p-class-ex {
+    visibility: none;
+}
