@@ -100,6 +100,7 @@
 
 <!-- Inline CSS -->
 <!-- This is in the html tag. CSS "style" will adjust the background color for the body of the site. -->
+
 <body style="background-color: aqua;">
 
 </body>
@@ -129,6 +130,7 @@
 
 <!-- You can also create a css folder in directory with a styles.css file with all the css changes you want external.
 Then you will add in each pages header a link css pointing to the file in the folder. -->
+
 <head>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -136,8 +138,8 @@ Then you will add in each pages header a link css pointing to the file in the fo
 <!-- CSS Syntax is usually formated as follows using external folder/file. 
     Keep properties in alphabetical order from top down.-->
 h1 {
-    color:red;
-    font-size: 200px;
+color:red;
+font-size: 200px;
 }
 
 <!-- You can use selectors also with classes instead of tags to be more specific as what to style.
@@ -145,14 +147,14 @@ In example img is a class and then how to style in css external. -->
 <img class="bacon" src="url.img" alt="url.img">
 
 .bacon {
-    background-color: green;
+background-color: green;
 }
 
 <!-- Class Selectors -->
 <h1 id="heading">example</h1>
 
 #heading {
-    color: blue
+color: blue
 }
 
 
@@ -172,26 +174,26 @@ You can adjust a block to display as inline etc.
 Again a block will not allow anything else on same line but can adjust width.
 A span cannot adjust width but will allow something else on same line. -->
 p {
-    display: inline;
+display: inline;
 }
 
 p {
-    display: block
+display: block
 }
 
 <!-- Change properties to inline block. The best of both worlds. -->
 p {
-    display: inline-block;
+display: inline-block;
 }
 
 <!-- Change display to none will remove as if it didnt exist. 
     Dislay visibility hidden will make it disappear but occupy the space.-->
 .p-class-ex {
-    display: none;
+display: none;
 }
 
 .p-class-ex {
-    visibility: none;
+visibility: none;
 }
 
 <!-- Display Positioning-->
@@ -206,3 +208,12 @@ right:20px
 <!-- Fixed position: This will cause the object to stay exactly where it is visibly even 
     when scrolling. Basically sticking to the page. -->
 position: fixed
+
+
+<!-- CSS Sizing -->
+<!-- 16px = 100% = 1em
+% and em basically causes size to be dynamic. Unwanted behavior could occur if parent px is not accounted for.
+Then a child object uses dynamic such as em. A work around could be using rem which ignores parent object size.
+
+A good rule of thumb is to use rem for sizing for objects like fonts etc. Not necessarily for margin etc.
+-->
