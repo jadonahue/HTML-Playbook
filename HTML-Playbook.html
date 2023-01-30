@@ -289,22 +289,23 @@ https://sneakpeekit.com/
 <!-- Navigation Bar Example -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="">Tindog</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="">Contact</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">Pricing</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">Download</a>
-        </li>
-    </ul>
- </div>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Download</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <!-- Bootstrap Grid -->
@@ -387,8 +388,152 @@ Mobile will take up 50% of width or 2 col per row. 12/2=6. -->
 <!-- Re-adjust constantly with the page. -->
 <div class="container-fluid"></div>
 
+<!-- Carousel -->
+<!-- Notice the id. This will be pointed to by href. The class can adjust how the carousel responds.-->
+<div id="testimonial-carousel" class="carousel slide" data-ride="false">
+    <div class="carousel-inner">
+
+        <!-- Only the first carousel item needs to be active. This will be the content showed.-->
+        <div class="carousel-item active">
+            <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+            <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+            <em>Pebbles, New York</em>
+        </div>
+
+        <div class="carousel-item">
+            <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of
+                their life. I think.</h2>
+            <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+            <em>Beverly, Illinois</em>
+        </div>
+    </div>
+
+    <!-- You can you a href or button. If a href point to the id or class of carousel. -->
+    <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+
+    </a>
+    <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+
+    </a>
+</div>
 
 
 <!-- Font Awesome -->
 <!-- Add font awesome to css. This goes in the head section after css. -->
 <script src="https://kit.fontawesome.com/9c6facd842.js" crossorigin="anonymous"></script>
+
+
+<!-- CSS Z-Index -->
+<!-- The z-index effects the position closest to screen and furthest away from screen. Stacking basically. 
+default (z-index = 0) speaking the elements of same value toward the top of code are further away (stack bottom) than elements 
+toward the bottom of code (stack top). This also assumes all elements are same position type. -->
+
+<!-- If a elements (ex: 1) z-index is higher than another element (ex:0). 
+Then the element with higher z-index will be closer and therefore stack ontop. -->
+
+<!-- If an element has an a position (absolute, relative, fixed) and z-index set to 1. 
+Then another element doesn't have a position but z-index is set to 10. 
+The element with the position is automaticcaly closer (stacked on top) than the 
+element without one even thought the z-index is higher on the element without a position. -->
+
+
+
+
+<!-- CSS Media Types -->
+<!-- @media <type> <feature> -->
+
+<!-- This will causse title to turn red when printing -->
+@media print {
+
+h1 {
+color:red;
+}
+
+}
+
+<!-- Change screen responsiveness at 900px or greater because it starts min. -->
+@media screen (min-width:900px) {
+
+//change something
+
+}
+
+<!-- In this example at 900px or less the font color will change to red. -->
+@media (max-width:900px) {
+
+h1 {
+color:red;
+}
+
+}
+
+<!-- In this example at 900px or less the font will change to 90px. -->
+h1 {
+font-size:30px;
+}
+
+@media (max-width:900px) {
+
+h1 {
+font-size:90px;
+}
+
+<!-- This will only be triggered on screen viewport  greater than 900px but less than 1000px -->
+@media (min-width:900px) and (max-width:1000px) {
+
+//change something
+
+}
+
+
+<!-- Code Refactoring -->
+1. readability
+
+2. modularity - is it modular enough where you can find a bug when it breaks. What specific portion. Focus on using id's
+sparingly for specific sections and id's should only appear once. Try to only use classes once as well for elements
+(Unless using bootstrap etc which uses multiple).
+Avoid in line styles at all costs, raather use external style sheet.
+
+3. efficiency - how fast does code run
+4. length - without effecting readability
+
+
+<!-- Pick & Mix Selectors -->
+<!-- They read from right to left and must be between child and parent -->
+
+<!-- Multiple Selectors which use ,-->
+selector1, selector2 {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+}
+
+<!-- Heirarical Selectors which use a space-->
+<!-- This targets the h1 (child) of the container-fluid (parent) -->
+.container-fluid h1 {
+padding: 3% 15% 7%;
+}
+
+selector1, selector2 {
+
+}
+
+<!-- Combined Selectors  -->
+<!-- No space but have to occur in the same element. This reads from left to right -->
+selector1.selector2 {
+
+}
+
+selector1#selector2 {
+
+}
+
+<!-- Selector Priority -->
+#id > .class > html elements (h, p, etc)
+
+inline css > internal or external css
